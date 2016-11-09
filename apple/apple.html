@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/less.css">
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<style>
+    body,ul,li,a{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    .header{
+        width: 100%;
+        height: 40px;
+        background: #444;
+    }
+    .header_medium{
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .header_medium:after{
+        content: "<广告>";
+        display: block;
+        font-size: 12px;
+        line-height: 40px;
+        text-align: center;
+        position: absolute;
+        right: 0;
+        color: #a8a8aa;
+    }
+    .nav{
+        width: 100%;
+        height: 44px;
+        background: rgba(0,0,0,0.8);
+    }
+    .nav-content{
+        width: 70%;
+        padding: 0 10px;
+        height: 100%;
+        margin: auto;
+    }
+    .nav-content ul{
+        width: auto;
+        height: 100%;
+    }
+    .nav-content-bag{
+        float: left;
+        margin-right: 7%;
+    }
+    .nav-content-bag a{
+        font-size: 1em;
+        color:#fff;
+        line-height: 44px;
+        text-align: center;
+    }
+    .nav-content-bag a:hover{
+        opacity: 0.8;
+    }
+    .hack1{
+        background-size:360px 200px;
+        background-image: url(img/nike_watch_small.jpg);
+        background-repeat: no-repeat;
+    }
+    .hack2{
+        background-size: 360px 200px;
+        background-image: url(img/airpods_small.jpg);
+        background-repeat: no-repeat;
+    }
+    .hack3{
+        background-size: 360px 200px;
+        background-image: url(img/iphone_upgrade_small.jpg);
+        background-repeat: no-repeat;
+    }
+    .hack4{
+        background-size: 360px 200px;
+        background-image: url(img/accessibility_small.jpg);
+        background-repeat: no-repeat;
+    }
+    .imgbox a:nth-child(1){
+        background-image: url(img/macbookpro_portrait_small.jpg);
+        background-repeat: no-repeat;
+    }
+    .imgbox a:nth-child(2){
+        background-image: url(img/iphone_large.jpg);
+        /*background-size: contain;*/
+        /*background-position: bottom center;*/
+        /*background-repeat: no-repeat;*/
+    }
+    .imgbox a:nth-child(3){
+        background-image: url(img/event_small.jpg);
+        background-position: 50% 22%;
+        background-repeat: no-repeat;
+    }
+    @media screen and (min-width:800px){
+        .hack3{
+            background-image: url(img/iphone_upgrade_medium.jpg);
+        }
+        .hack4{
+            background-image: url(img/accessibility_medium.jpg);
+        }
+        .hack2{
+            background-image: url(img/airpods_medium.jpg);
+        }
+        .hack1{
+            background-image: url(img/nike_watch_medium.jpg);
+        }
+        .imgbox a:nth-child(1){
+            background-image: url(img/macbookpro_medium.jpg);
+            background-repeat: no-repeat;
+        }
+        .imgbox a:nth-child(2){
+            background-image: url(img/iphone_square_large.jpg);
+            /*background-size: contain;*/
+            /*background-position: bottom center;*/
+            /*background-repeat: no-repeat;*/
+        }
+        .imgbox a:nth-child(3){
+            background-image: url(img/event_medium.jpg);
+            background-size: cover;
+            top: 0%;
+            background-position: 50% 38%;
+        }
+    }
+    @media screen and (min-width:1000px){
+        .hack3{
+            background-image: url(img/iphone_upgrade_large.jpg);
+        }
+        .hack4{
+            background-image: url(img/accessibility_large.jpg);
+        }
+        .hack2{
+            background-image: url(img/airpods_large.jpg);
+        }
+        .hack1{
+            background-image: url(img/nike_watch_large.jpg);
+        }
+        .imgbox a:nth-child(1){
+            background-image: url(img/macbookpro_large.jpg);
+            background-size: cover;
+            top: 0%;
+            background-position: 50% 38%;
+        }
+        .imgbox a:nth-child(2){
+            background-image: url(img/iphone_large.jpg);
+            /*background-size: contain;*/
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+        .imgbox a:nth-child(3){
+            background-image: url(img/event_large.jpg);
+            background-size: cover;
+            top: 0%;
+            background-position: 50% 38%;
+            background-repeat: no-repeat;
+        }
+    }
+    .container{
+        width: 1349px;
+        height: 200px;
+    }
+    .container>.row{
+        height: 100%;
+    }
+    .container>.row>div{
+        height: 100%;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+    }
+    .banner{
+        width: 100%;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+    }
+    .imgbox{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .imgbox a{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+   .imgbox a span{
+       font-size: 30px;
+       display: block;
+       color:white;
+       width: 25%;
+      margin:0 auto;
+       font-weight: bold;
+   }
+    .imgbox a:nth-child(1) span{
+        color:black;
+        font-weight: bold;
+    }
+</style>
+<body>
+<div class="header">
+    <div class="header_medium"></div>
+</div>
+<div class="nav">
+    <div class="nav-content">
+        <ul>
+            <li class="nav-content-bag"><a href="">apple</a></li>
+            <li class="nav-content-bag"><a href="">Mac</a></li>
+            <li class="nav-content-bag"><a href="">iPad</a></li>
+            <li class="nav-content-bag"><a href="">iPhone</a></li>
+            <li class="nav-content-bag"><a href="">Watch</a></li>
+            <li class="nav-content-bag"><a href="">Music</a></li>
+            <li class="nav-content-bag"><a href="">技术支持</a></li>
+            <li class="nav-content-bag"><a href="">搜索</a></li>
+            <li class="nav-content-bag" style="margin:0"><a href="">购物袋</a></li>
+        </ul>
+    </div>
+</div>
+<div class="banner">
+  <div class="imgbox">
+      <a href=""><span>Macbook Pro</span><br><span>一身才华，一触即发</span></a>
+      <a href=""><span>iphone</span><br><span>7,在此</span></a>
+      <a href=""><span>apple特别活动</span><br><span>观看主题演讲。</span></a>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-l-3 col-m-6 col-s-12 hack1"></div>
+        <div class="col-l-3 col-m-6 col-s-12 hack2"></div>
+        <div class="col-l-3 col-m-6 col-s-12 hack3"></div>
+        <div class="col-l-3 col-m-6 col-s-12 hack4"></div>
+    </div>
+</div>
+</body>
+<script>
+    var width=$(window).width();
+
+               $(window).resize(function () {
+                       width=$(window).width();
+
+                            })
+    var num=0;
+       var next=0;
+    for(var i=0;i<$(".banner .imgbox a").length;i++){
+        $(".banner .imgbox a").css("left",width).eq(0).css("left",0);
+    }
+             function move(type){
+                     type=type||"right";
+                     if(type=="left") {
+                         next--;
+                         if(next<0){
+                             next=$(".banner .imgbox a").length-1;
+                         }
+                         $(".banner .imgbox a").eq(num).css("left",0);
+                         $(".banner .imgbox a").eq(next).css("left",-width);
+                         $(".banner .imgbox a").eq(num).animate({left:width})
+                         $(".banner .imgbox a").eq(next).animate({left:0})
+
+                    }else if(type=="right"){
+                       next++;
+                        if(next>$(".banner .imgbox a").length-1){
+                             next=0;
+                         }
+                         $(".banner .imgbox a").eq(num).css("left",0);
+                         $(".banner .imgbox a").eq(next).css("left",width);
+                         $(".banner .imgbox a").eq(num).animate({left:"-"+width});
+                         $(".banner .imgbox a").eq(next).animate({left:0});
+                     }
+                     num=next;
+                 }
+               var t =  setInterval(move,2000)
+</script>
+</html>
