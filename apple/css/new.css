@@ -1,9 +1,8 @@
 * {
   box-sizing: border-box;
 }
-/*小屏的时候*/
 .container {
-  width: 600px;
+  width: 735px;
   margin: auto;
 }
 .container > .row {
@@ -32,7 +31,9 @@
 .container-fluid > .row:after {
   clear: both;
 }
-/*最小屏*/
+.col-s-hide {
+  display: none;
+}
 .container > .row > .col-s-1 {
   float: left;
   width: 8.33333333%;
@@ -129,14 +130,9 @@
   float: left;
   width: 100%;
 }
-.col-s-hide {
-  display: none;
-}
-/*中屏*/
 @media screen and (min-width: 800px) {
   .container {
     width: 800px;
-    margin: auto;
   }
   .container > .row > .col-m-1 {
     float: left;
@@ -244,11 +240,9 @@
     display: none;
   }
 }
-/*大屏*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1075px) {
   .container {
-    width: 1200px;
-    margin: auto;
+    width: 1075px;
   }
   .container > .row > .col-l-1 {
     float: left;
@@ -349,11 +343,10 @@
   .col-s-hide {
     display: block;
   }
-  .col-m-hide {
-    display: block;
-  }
   .col-l-hide {
     display: none;
   }
+  .col-m-hide {
+    display: block;
+  }
 }
-/*清除浮动*/
